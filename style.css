@@ -16,3 +16,26 @@ body {
  min-height: 300px;
  min-width: 400px;
 }
+
+.question-container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background-color: burlywood;
+ 
+}
+
+.questions {
+ margin-right: 0;
+ margin: 1rem 0;
+}
+
+ .ans-list li {
+  margin: 1rem 0;
+ }
+
+ .submit {
+width: 100%;
+font-size: 2rem;
+ }
