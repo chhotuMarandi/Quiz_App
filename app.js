@@ -1,12 +1,11 @@
-const data = [
+const quesData = [
   {
     id: 1,
-    question:
-      "Which programs reduce the size of the files so that they occupy lesser space on the disk?",
-    a: "Backup",
-    b: "Uninstall Program",
-    c: "File Compression",
-    d: "Disk Cleanup",
+    question: " The smallest unit in a digital system is a",
+    a: " Mega Byte",
+    b: "text",
+    c: "bit",
+    d: "character",
   },
   {
     id: 2,
@@ -26,3 +25,44 @@ const data = [
     d: "Ms Dos",
   },
 ];
+
+
+const questionContainer = document.querySelector(".question-container");
+
+function displayQues () {
+  let mapQues = quesData.map((item) => {
+
+   console.log(item.question)
+
+     return `<div class="data">
+        <div class="questions">
+          <h4>1. {item.question}</h4>
+        </div>
+        <div class="ans-list">
+          <ul class="ans">
+            <li>
+              <input type="radio" name="ansBox">
+              <label for="">item.a</label>
+            </li>
+            <li>
+              <input type="radio" name="ansBox">
+              <label for="">item.b</label>
+            </li>
+            <li>
+              <input type="radio" name="ansBox">
+              <label for="">item.c</label>
+            </li>
+            <li>
+              <input type="radio" name="ansBox">
+              <label for="">item.d</label>
+            </li>
+          </ul>
+        </div>
+    </div>`;
+
+   })
+      mapQues = mapQues.join("");
+      questionContainer.innerHTML = mapQues;
+  }
+
+displayQues();
